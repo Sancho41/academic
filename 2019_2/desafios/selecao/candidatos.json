@@ -1,0 +1,48 @@
+{
+    "quantidadeVagas":4,
+    "participantes":[{
+            "nomeAluno":"Márcio alexandre",
+            "nota1":2.58,
+            "nota2":9.67,
+            "nota3":8.12
+        },
+        {
+            "nomeAluno":"Erika Bianca",
+            "nota1":3.58,
+            "nota2":7.69,
+            "nota3":7.32
+        },
+        {
+            "nomeAluno":"Sonia freire",
+            "nota1":9.20,
+            "nota2":5.14,
+            "nota3":6.27
+        },
+        {
+            "nomeAluno":"Rafael OLiveira",
+            "nota1":3.58,
+            "nota2":7.69,
+            "nota3":7.32
+        },
+        {
+            "nomeAluno":"Erlando",
+            "nota1":3.58,
+            "nota2":7.69,
+            "nota3":7.32
+        },
+
+        {
+            "nomeAluno":"Erlando 2",
+            "nota1":3.58,
+            "nota2":7.69,
+            "nota3":7.32
+        },
+
+        {
+            "nomeAluno":"Erlando 3",
+            "nota1":2.58,
+            "nota2":7.69,
+            "nota3":7.32
+        }
+    ]
+}
