@@ -21,6 +21,7 @@ void mostrar(lista * l);
 lista * aloca_lista();
 registro * aloca_registro();
 void incluir(lista * l,int x);
+registro * procurar(lista * l, int x);
 
 int main () {
 
@@ -30,7 +31,14 @@ int main () {
     incluir(l1, 1);
     incluir(l1, 2);
     incluir(l1, 3);
-    mostrar(l1);
+    // mostrar(l1);
+    registro * a = procurar(l1, 0);
+    if (a != NULL){
+        printf("Encontrou:\n");
+        printf("%d\n", a->valor);
+    } else {
+        printf("Não econtrou\n");
+    }
 
     return 0;
 }
@@ -67,6 +75,21 @@ void incluir(lista * l, int x){
         aux->prox = novo;
     }
     l->qtd++;
+}
+
+registro * procurar(lista * l, int x){
+    registro * aux;
+    if (l->inicio == NULL)
+        return NULL;
+    else {
+        aux = l->inicio;
+        while(aux != NULL){
+            if (aux->valor == x)
+                return aux;
+            aux = aux->prox;
+        }
+        return NULL;
+    }
 }
 
 void mostrar(lista * l){
