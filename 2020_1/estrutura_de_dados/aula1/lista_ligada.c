@@ -32,7 +32,7 @@ int main () {
     incluir(l1, 2);
     incluir(l1, 3);
     // mostrar(l1);
-    registro * a = procurar(l1, 3);
+    registro * a = procurar(l1, 0);
     if (a != NULL){
         printf("Encontrou:\n");
         printf("%d\n", a->valor);
