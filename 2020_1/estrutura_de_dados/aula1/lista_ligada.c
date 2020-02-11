@@ -78,7 +78,7 @@ void mostrar(lista * l){
     } else {
         aux = l->inicio;
         while (aux != NULL){
-            printf("\n valor = %d", aux->valor);
+            printf("valor = %d\n", aux->valor);
             aux = aux->prox;
         }
     }
