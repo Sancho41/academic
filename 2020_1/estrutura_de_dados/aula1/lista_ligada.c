@@ -1,10 +1,6 @@
 /*
     Dia 10/02 - Lista Ligadas
-
     Um elemento tem uma referência para próximo elemento
-
-    
-
 */
 
 #include <stdio.h>
@@ -56,16 +52,18 @@ registro * aloca_registro(){
 }
 
 void incluir(lista * l, int x){
+    // Cria novo registro
     registro * novo;
     novo = aloca_registro();
     novo->valor = x;
+
+    // Adiciona novo registro na
     if (l->qtd == 0)
         l->inicio = novo;
     else {
         registro * aux = l->inicio;
-        while (aux->prox != NULL) {
+        while (aux->prox != NULL)
             aux = aux->prox;
-        }
         aux->prox = novo;
     }
     l->qtd++;
@@ -73,9 +71,9 @@ void incluir(lista * l, int x){
 
 void mostrar(lista * l){
     registro * aux;
-    if (l->inicio == NULL){
+    if (l->inicio == NULL)
         printf("\n Nao existem elementos");
-    } else {
+    else {
         aux = l->inicio;
         while (aux != NULL){
             printf("valor = %d\n", aux->valor);
