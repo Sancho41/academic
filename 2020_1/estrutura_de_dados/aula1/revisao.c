@@ -5,10 +5,7 @@ int main () {
 
 
     int a;
-
     scanf("%d", &a);
-
     printf("Var: %d\n", a);
-
     return 0;
 }
