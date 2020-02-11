@@ -32,7 +32,7 @@ int main () {
     incluir(l1, 2);
     incluir(l1, 3);
     // mostrar(l1);
-    registro * a = procurar(l1, 0);
+    registro * a = procurar(l1, 3);
     if (a != NULL){
         printf("Encontrou:\n");
         printf("%d\n", a->valor);
@@ -65,7 +65,7 @@ void incluir(lista * l, int x){
     novo = aloca_registro();
     novo->valor = x;
 
-    // Adiciona novo registro na
+    // Adiciona novo registro na lista
     if (l->qtd == 0)
         l->inicio = novo;
     else {
