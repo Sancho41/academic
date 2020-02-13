@@ -22,23 +22,27 @@ lista * aloca_lista();
 registro * aloca_registro();
 void incluir(lista * l,int x);
 registro * procurar(lista * l, int x);
+void deletar(lista * l, registro * r);
 
 int main () {
 
     lista * l1;
     l1 = aloca_lista();
+    int i;
 
-    incluir(l1, 1);
-    incluir(l1, 2);
-    incluir(l1, 3);
-    // mostrar(l1);
-    registro * a = procurar(l1, 0);
-    if (a != NULL){
-        printf("Encontrou:\n");
-        printf("%d\n", a->valor);
-    } else {
-        printf("Não econtrou\n");
+    printf("Incluindo Itens:\n");
+
+    for (i = 0; i < 10; i++){
+        incluir(l1, i);
     }
+
+    printf("Mostrando itens:\n");
+    mostrar(l1);
+    printf("Procurando item de valor 2:\n");
+    registro * a = procurar(l1, 2);
+    printf("Deletando item de valor 2:\n");
+    deletar(l1, a);
+    mostrar(l1);
 
     return 0;
 }
@@ -105,3 +109,18 @@ void mostrar(lista * l){
     }
 }
 
+void deletar(lista * l, registro * r){
+    registro * aux;
+    registro * ant;
+    aux = l->inicio;
+    while(aux != NULL){
+        if (aux->prox == r){
+            ant = aux;
+            aux = aux->prox;
+            ant->prox = aux->prox;
+            free(aux);
+            break;
+        }
+        aux = aux->prox;
+    }
+}
