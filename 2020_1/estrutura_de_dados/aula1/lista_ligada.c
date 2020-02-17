@@ -22,26 +22,41 @@ lista * aloca_lista();
 registro * aloca_registro();
 void incluir(lista * l,int x);
 registro * procurar(lista * l, int x);
-void deletar(lista * l, registro * r);
+int remover_registro(lista * l, int x);
 
 int main () {
 
     lista * l1;
     l1 = aloca_lista();
-    int i;
+    int i, n, d;
 
-    printf("Incluindo Itens:\n");
+    printf("Incluindo Itens\n");
 
     for (i = 0; i < 10; i++){
         incluir(l1, i);
     }
 
-    printf("Mostrando itens:\n");
+    printf("Mostrando itens\n");
     mostrar(l1);
-    printf("Procurando item de valor 2:\n");
-    registro * a = procurar(l1, 2);
-    printf("Deletando item de valor 2:\n");
-    deletar(l1, a);
+    printf("=====\n");
+
+    n = 10;
+
+    printf("Procurando item de valor %d\n", n);
+    registro * a = procurar(l1, n);
+    if (a)
+        printf("Encontrou item de numero %d\n", n);
+    else printf("item de numero %d nao encontrado\n", n);
+
+    printf("=====\n");
+    n = 10;
+    printf("Deletando item de valor %d\n", n);
+    d = remover_registro(l1, n);
+    if (d)
+        printf("Item de valor %d deletado\n", n);
+    else printf("item de numero %d nao encontrado\n", n);
+
+    printf("=====\n");
     mostrar(l1);
 
     return 0;
@@ -109,18 +124,21 @@ void mostrar(lista * l){
     }
 }
 
-void deletar(lista * l, registro * r){
-    registro * aux;
-    registro * ant;
+int remover_registro(lista * l, int x){
+    registro * aux, * ant = NULL;
     aux = l->inicio;
     while(aux != NULL){
-        if (aux->prox == r){
-            ant = aux;
-            aux = aux->prox;
+        if (aux->valor == x){
+            if (ant == NULL){
+                l->inicio = aux->prox;
+                return 1;
+            }
             ant->prox = aux->prox;
             free(aux);
-            break;
+            return 1;
         }
+        ant = aux;
         aux = aux->prox;
     }
+    return 0;
 }
