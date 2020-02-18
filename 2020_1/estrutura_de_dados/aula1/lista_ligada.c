@@ -23,41 +23,14 @@ registro * aloca_registro();
 void incluir(lista * l,int x);
 registro * procurar(lista * l, int x);
 int remover_registro(lista * l, int x);
+void menu (lista * l);
 
 int main () {
 
     lista * l1;
     l1 = aloca_lista();
-    int i, n, d;
-
-    printf("Incluindo Itens\n");
-
-    for (i = 0; i < 10; i++){
-        incluir(l1, i);
-    }
-
-    printf("Mostrando itens\n");
-    mostrar(l1);
-    printf("=====\n");
-
-    n = 10;
-
-    printf("Procurando item de valor %d\n", n);
-    registro * a = procurar(l1, n);
-    if (a)
-        printf("Encontrou item de numero %d\n", n);
-    else printf("item de numero %d nao encontrado\n", n);
-
-    printf("=====\n");
-    n = 10;
-    printf("Deletando item de valor %d\n", n);
-    d = remover_registro(l1, n);
-    if (d)
-        printf("Item de valor %d deletado\n", n);
-    else printf("item de numero %d nao encontrado\n", n);
-
-    printf("=====\n");
-    mostrar(l1);
+    
+    menu(l1);
 
     return 0;
 }
@@ -114,7 +87,7 @@ registro * procurar(lista * l, int x){
 void mostrar(lista * l){
     registro * aux;
     if (l->inicio == NULL)
-        printf("\n Nao existem elementos");
+        printf("Nao existem elementos\n");
     else {
         aux = l->inicio;
         while (aux != NULL){
@@ -141,4 +114,56 @@ int remover_registro(lista * l, int x){
         aux = aux->prox;
     }
     return 0;
+}
+
+void menu (lista * l){
+    int op, numero, retorno;
+    registro * busca;
+    
+    do {
+        printf("==================\n");
+        printf("Escolha uma opcao:\n");
+        printf("1 - Adicionar\n");
+        printf("2 - Buscar\n");
+        printf("3 - Deletar\n");
+        printf("4 - Mostrar\n");
+        printf("5 - Sair\n");
+        scanf("%d", &op);
+
+        switch(op){
+            case 1:
+                printf("Digite um número para adicionar a lista: ");
+                scanf("%d", &numero);
+                incluir(l, numero);
+                printf("Numero %d adicionado na lista.\n", numero);
+            break;
+            case 2:
+                printf("Digite o numero que deseja procurar: ");
+                scanf("%d", &numero);
+                busca = procurar(l, numero);
+                if (busca)
+                    printf("Numero %d encontrado\n", numero);
+                else printf("Numero %d nao encontrado\n", numero);
+            break;
+            case 3:
+                printf("Digite o numero que deseja excluir: ");
+                scanf("%d", &numero);
+                retorno = remover_registro(l, numero);
+                if (retorno)
+                    printf("Numero %d deletado com sucess\n", numero);
+                else printf("Numero %d nao encontrado\n", numero);
+            break;
+            case 4:
+                printf("Mostrando lista:\n");
+                mostrar(l);
+            break;
+            case 5:
+                printf("Saindo...\n");
+            break;
+            default:
+                printf("Opcao invalida\n");
+            break;
+        }
+
+    } while (op != 5);
 }
