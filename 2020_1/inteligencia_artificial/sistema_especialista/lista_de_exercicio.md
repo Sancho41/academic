@@ -37,3 +37,4 @@
 5. A travessia da ponte com um carro dura em média uma hora.
 6. A travessia com barquinho dura em média quinze minutos.
 7. O tempo é relevante quando se chega ao destino menos de onze minutos antes do compromisso.
+8. 
