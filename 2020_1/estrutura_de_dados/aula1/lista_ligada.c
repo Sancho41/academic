@@ -24,6 +24,7 @@ void incluir(lista * l,int x);
 registro * procurar(lista * l, int x);
 int remover_registro(lista * l, int x);
 void menu (lista * l);
+void mostrar_reverso(lista * l, registro * ultimo);
 
 int main () {
 
@@ -97,6 +98,16 @@ void mostrar(lista * l){
     }
 }
 
+void mostrar_reverso(lista * l, registro * ultimo){
+    if (ultimo == NULL)
+        ultimo = l->inicio;
+    
+    if (ultimo->prox != NULL)
+        mostrar_reverso(l, ultimo->prox);
+    
+    printf("valor reverso: %d\n", ultimo->valor);
+}
+
 int remover_registro(lista * l, int x){
     registro * aux, * ant = NULL;
     aux = l->inicio;
@@ -127,7 +138,8 @@ void menu (lista * l){
         printf("2 - Buscar\n");
         printf("3 - Deletar\n");
         printf("4 - Mostrar\n");
-        printf("5 - Sair\n");
+        printf("5 - Mostrar reverso\n");
+        printf("6 - Sair\n");
         scanf("%d", &op);
 
         switch(op){
@@ -158,6 +170,10 @@ void menu (lista * l){
                 mostrar(l);
             break;
             case 5:
+                printf("Mostrando lista reverso:\n");
+                mostrar_reverso(l, NULL);
+            break;
+            case 6:
                 printf("Saindo...\n");
             break;
             default:
@@ -165,5 +181,5 @@ void menu (lista * l){
             break;
         }
 
-    } while (op != 5);
+    } while (op != 6);
 }
