@@ -7,7 +7,7 @@ from smtplib import SMTP
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from email.mime.application import MIMEApplication
-
+from credentials import credentials
 
 path = str(pathlib.Path(__file__).parent.absolute())
 
@@ -30,8 +30,8 @@ def login(matricula, password):
         return sess
 
 if __name__ == "__main__": 
-    matricula = "1712130049" # input("Digite sua matrícula: ")
-    password = "05947986124" # getpass("Digite a sua senha: ")
+    matricula = credentials['matricula'] # input("Digite sua matrícula: ")
+    password = credentials['senha'] # getpass("Digite a sua senha: ")
 
     session = login(matricula, password)
     if session:
@@ -62,9 +62,9 @@ if __name__ == "__main__":
 
         message = MIMEMultipart()
         message['Subject'] = "Boleto IESB"
-        message['From'] = 'gabriel.sancho13@gmail.com'
-        message['Reply-to'] = 'gabriel.sancho13@gmail.com'
-        message['To'] = 'gabriel.sancho13@gmail.com, ge.regobarros@hotmail.com'
+        message['From'] = credentials['email_login']
+        message['Reply-to'] = credentials['email_login']
+        message['To'] = credentials['email_to']
 
         text = MIMEText("Boleto sege em anexo")
         message.attach(text)
@@ -81,7 +81,7 @@ if __name__ == "__main__":
         server.ehlo()
         server.starttls()
         server.ehlo()
-        server.login("gabriel.sancho13@gmail.com", "jgjulyqdaonejdxw")
+        server.login(credentials['email_login'], credentials['email_password'])
         server.sendmail(message['From'], message['To'], message.as_string())
         server.quit()
         
