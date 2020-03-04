@@ -55,7 +55,17 @@ if __name__ == "__main__":
         a = '<meta charset="utf-8">' + a
         
         try:
-            pdfkit.from_string(a, f'{path}/boleto.pdf')   
+
+            options = {
+                'page-size':'A4',
+                'encoding':'utf-8', 
+                'margin-top':'0cm',
+                'margin-bottom':'0cm',
+                'margin-left':'0cm',
+                'margin-right':'0cm'
+            }
+
+            pdfkit.from_string(a, f'{path}/boleto.pdf', options=options)   
         except:
             pass
         
