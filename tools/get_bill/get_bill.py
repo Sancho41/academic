@@ -64,7 +64,7 @@ if __name__ == "__main__":
         message['Subject'] = "Boleto IESB"
         message['From'] = 'gabriel.sancho13@gmail.com'
         message['Reply-to'] = 'gabriel.sancho13@gmail.com'
-        message['To'] = 'gabriel.sancho13@gmail.com'
+        message['To'] = 'gabriel.sancho13@gmail.com, ge.regobarros@hotmail.com'
 
         text = MIMEText("Boleto sege em anexo")
         message.attach(text)
