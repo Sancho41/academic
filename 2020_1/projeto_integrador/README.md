@@ -13,3 +13,4 @@
             - Introdução
             - Referêncial teórico
         - Padrão SPC
+https://github.com/Sancho41/academic/tree/master/2020_1/inteligencia_artificial/trabalho
