@@ -1,4 +1,6 @@
+# ACCEPTED
 # https://onlinejudge.org/external/114/p11498.pdf
+
 while (True):
     qnt = int(input())
     if not qnt: break

@@ -1,7 +1,5 @@
-'''
-    https://onlinejudge.org/external/101/10114.pdf
-    WA
-'''
+# WA
+# https://onlinejudge.org/external/101/10114.pdf
 
 while True:
     total_days, dpay, loan_amount, qnt_depr = map(float, input().split())

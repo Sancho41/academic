@@ -1,4 +1,6 @@
+# ACCEPTED
 # https://onlinejudge.org/external/117/11727.pdf
+
 for case in range(int(input())):
     a, b, c = map(int, input().split())
 
