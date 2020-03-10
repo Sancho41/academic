@@ -1,5 +1,0 @@
-Scrum: scrum.org
-    - Project backlog / User story / Task sprints 
-    - Project owner
-    - Sprint
-    
