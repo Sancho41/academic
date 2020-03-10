@@ -12,4 +12,3 @@ def arrayMaxConsecutiveSum(inputArray):
         current_sum = max(x, current_sum + x)
         max_sum = max(current_sum, max_sum)
     return max_sum
-        
