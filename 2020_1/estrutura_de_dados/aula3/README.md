@@ -2,9 +2,9 @@
 ## 09/03/2020
 1) Utilizando como base os cóigos de listaencadeada.c e 
 listaduplamente.c construa construa as seguintes funções:
-    a) função iterativa que conta todos os elementos de
+    - função iterativa que conta todos os elementos de
     uma lista ligada.
-    b) função iterativa que remove todos os números primos de uma 
+    - função iterativa que remove todos os números primos de uma 
     lista ligada.
 
 2) Construa uma função que diga se os elementos de uma lista ligada
