@@ -1,6 +1,5 @@
 /*
-    Dia 10/02 - Lista Ligadas
-    Um elemento tem uma referência para próximo elemento
+    Exercício inicia na linha 196
 */
 
 #include <stdio.h>
@@ -44,23 +43,6 @@ int main () {
     mostrar(&vetor[1]);
 
     return 0;
-}
-
-lista * separa_lista(lista * l){
-    lista * vetor;
-    vetor = (lista*)malloc(2 * sizeof(lista));
-    registro * aux;
-    aux = l->inicio;
-
-    while (aux != NULL){
-        if (aux->valor % 2 == 0)
-            incluir(&vetor[0], aux->valor);
-        else incluir(&vetor[1], aux->valor);
-
-        aux = aux->prox;
-    }
-
-    return vetor;
 }
 
 lista * aloca_lista(){
@@ -209,4 +191,23 @@ void menu (lista * l){
         }
 
     } while (op != 6);
+}
+
+/* Exercício começa aqui */
+
+lista * separa_lista(lista * l){
+    lista * vetor;
+    vetor = (lista*)malloc(2 * sizeof(lista));
+    registro * aux;
+    aux = l->inicio;
+
+    while (aux != NULL){
+        if (aux->valor % 2 == 0)
+            incluir(&vetor[0], aux->valor);
+        else incluir(&vetor[1], aux->valor);
+
+        aux = aux->prox;
+    }
+
+    return vetor;
 }

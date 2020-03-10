@@ -1,5 +1,5 @@
 # Exercícios:
-09/03/2020
+## 09/03/2020
 1) Utilizando como base os cóigos de listaencadeada.c e 
 listaduplamente.c construa construa as seguintes funções:
     a) função iterativa que conta todos os elementos de

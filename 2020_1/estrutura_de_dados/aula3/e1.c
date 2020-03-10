@@ -1,6 +1,5 @@
 /*
-    Dia 10/02 - Lista Ligadas
-    Um elemento tem uma referência para próximo elemento
+    Exercício inicia na linha 200
 */
 
 #include <stdio.h>
@@ -25,21 +24,16 @@ registro * procurar(lista * l, int x);
 int remover_registro(lista * l, int x);
 void menu (lista * l);
 void mostrar_reverso(lista * l, registro * ultimo);
-void concatena_listas(lista * l1, lista * l2);
+int conta_quantidade(lista * l);
+void remove_primos(lista * l);
+int verifica_primo (int n);
 
 int main () {
 
-    lista * l1, * l2;
+    lista * l1;
     l1 = aloca_lista();
-    l2 = aloca_lista();
-
-    printf("Preencha a primeira lista:\n");
+    
     menu(l1);
-    printf("Preencha a segunda lista:\n");
-    menu(l2);
-    concatena_listas(l1, l2);
-    printf("Listas concatenadas:\n");
-    mostrar(l1);
 
     return 0;
 }
@@ -147,6 +141,8 @@ void menu (lista * l){
         printf("3 - Deletar\n");
         printf("4 - Mostrar\n");
         printf("5 - Mostrar reverso\n");
+        printf("6 - Conta a quantidade de elementos\n");
+        printf("7 - Remove primos\n");
         printf("0 - Sair\n");
         scanf("%d", &op);
 
@@ -181,6 +177,14 @@ void menu (lista * l){
                 printf("Mostrando lista reverso:\n");
                 mostrar_reverso(l, NULL);
             break;
+            case 6:
+                retorno = conta_quantidade(l);
+                printf("Quantidade de elementos: %d\n", retorno);
+            break;
+            case 7:
+                printf("Removendo primos da lista\n");
+                remove_primos(l);
+            break;
             case 0:
                 printf("Saindo...\n");
             break;
@@ -192,12 +196,39 @@ void menu (lista * l){
     } while (op != 0);
 }
 
-void concatena_listas(lista * l1, lista * l2){
-    registro * aux;
-    aux = l1->inicio;
 
-    while(aux->prox != NULL)
+/* Exercício começa aqui */
+
+int conta_quantidade (lista * l) {
+    registro * aux = l->inicio;
+    int contador = 0;
+
+    while(aux != NULL){
         aux = aux->prox;
+        contador++;
+    }
 
-    aux->prox = l2->inicio;
+    return contador;
+}
+
+void remove_primos(lista * l){
+    registro * aux, * prox;
+    aux = l->inicio;
+    while(aux != NULL) {
+        prox = aux->prox;
+        if (verifica_primo(aux->valor))
+            remover_registro(l, aux->valor);
+        aux = prox;
+    }
+}
+
+int verifica_primo (int n) {
+    int i;
+
+    if (n == 1) return 0;
+
+    for (i = 2; i < n; i++)
+        if (n % i == 0)
+            return 0;
+    return 1;
 }

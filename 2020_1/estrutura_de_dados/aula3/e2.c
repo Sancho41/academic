@@ -1,6 +1,5 @@
 /*
-    Dia 10/02 - Lista Ligadas
-    Um elemento tem uma referência para próximo elemento
+    Exercício inicia na linha 193
 */
 
 #include <stdio.h>
