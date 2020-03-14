@@ -1,4 +1,4 @@
-# WIP
+# ACCEPTED
 # https://onlinejudge.org/external/5/573.pdf
 
 while True:
@@ -7,24 +7,21 @@ while True:
 
     days = 1
     climbed = 0
+    factor = u*f/100
 
     while True:
-        print(days, climbed, u, climbed + u, climbed + u - d, u) 
+
         climbed += u
+        if (u > 0): u -= factor
 
-        if climbed > h:
-            break
+        if climbed > h: 
+            print("success on day", days)
+            break 
+        
         climbed -= d
+
         if climbed < 0:
-            climbed = 0
+            print("failure on day", days)
             break
-    
-
+        
         days += 1
-        u -= u * (f / 100)
-        if u < 0:
-            u = 0
-
-    if (climbed >= h):
-        print('success', end=' ')
-    print(days)
