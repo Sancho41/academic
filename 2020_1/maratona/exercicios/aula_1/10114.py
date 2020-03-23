@@ -1,53 +1,35 @@
-# WA
+# WA - ( Não encontrei o corner case )
 # https://onlinejudge.org/external/101/10114.pdf
 
 while True:
-    total_days, dpay, loan_amount, qnt_depr = map(float, input().split())
-    car = loan_amount + dpay
-    par = loan_amount / total_days
+    months, paid, loan_amount, qnt_depr = map(float, input().split())
 
-    if total_days < 0: break
+    if months < 0: break
 
-    _, depr = map(float, input().split())
+    l_per = list()
 
-    car -= car * depr
+    last = 0
 
-    current_day = 1
+    for _ in range(int(qnt_depr)):
 
-    last_depr = depr
+        month, percent = map(float, input().split())
+        month = int(month)
 
-    for _ in range(int(qnt_depr) - 1):
-        depr_day, depr = map(float, input().split())
+        for _ in range(last, month):
+            l_per.append(l_per[-1])
+        l_per.append(percent)
+        last = month + 1
+    
+    now = 0
+    month_pay = loan_amount / months
+    current_val = (loan_amount + paid) * (1 - l_per[0])
+    current_loan = loan_amount
 
-        for x in range(current_day, int(depr_day)):
-            car -= car * last_depr
-            loan_amount -= par
-            if car < loan_amount:
-                current_day += 1
-            else: break
+    while (current_val < current_loan):
+        now += 1
 
-        last_depr = depr
-        car -= car * last_depr
-        loan_amount -= par
-        if car < loan_amount:
-            current_day += 1
+        percent = (l_per[now] if now < len(l_per) else l_per[-1])
 
-    for x in range(current_day, int(total_days) + 1):
-        last_depr = depr
-        car -= car * last_depr
-        loan_amount -= par
-        if car < loan_amount:
-            current_day += 1
-        else:
-            print(current_day, end=" ")
-            print("month" if current_day == 1 else "months")
-            break
-
-
-        
-
-'''
-4 months
-1 month
-49 months
-'''
+        current_loan -= month_pay
+        current_val = current_val * (1 - percent)
+    print(now, "monts" if now > 1 else "month")
