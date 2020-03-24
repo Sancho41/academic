@@ -1,4 +1,4 @@
-# Exercícios:
+# Exercícios Lista ligada de duplamente ligada:
 ## 09/03/2020
 1) Utilizando como base os cóigos de listaencadeada.c e 
 listaduplamente.c construa construa as seguintes funções:
