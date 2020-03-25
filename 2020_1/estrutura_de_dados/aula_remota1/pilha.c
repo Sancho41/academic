@@ -91,6 +91,7 @@ int pop(pilha * p) {
     topo = p->topo;
     valor = topo->valor;
     p->topo = topo->anterior;
+    free(topo);
     return valor;
 }
 
