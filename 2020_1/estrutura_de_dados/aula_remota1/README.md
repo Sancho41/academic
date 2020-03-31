@@ -1,7 +1,7 @@
-# Pilha e Fila
+# Pilha
 ---
 # Pilha:
-- O primeiro elemento que entra é o último que sai.
+- O primeiro elemento que entra é o **último** que sai.
 
 # Funções
 - push:
@@ -13,4 +13,3 @@
 - stackpop:
     > Somente mostra o elemento que está no topo da pilha (Não o remove)    
 ---
-# Fila:
