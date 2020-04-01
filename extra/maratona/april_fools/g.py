@@ -22,14 +22,12 @@ per nextum in unam tum XI conscribementis fac sic
 cis
 '''
 
-from math import sqrt
-
-l = list()
+cumula = list()
 for _ in range(11):
-  l.append(int(input()))
+  cumula.append(int(input()))
 
 for _ in range(11):
-  varo = l.pop()
+  varo = cumula.pop()
   aresulto = abs(varo**(1/2))
   bresulto = (varo**3) * 5
   resulto = aresulto + bresulto
