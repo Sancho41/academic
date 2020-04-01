@@ -25,17 +25,17 @@ cis
 from math import sqrt
 
 l = list()
-for x in range(11):
+for _ in range(11):
   l.append(int(input()))
 
-for x in range(10, -1, -1):
-  varo = l[x]
+for _ in range(11):
+  varo = l.pop()
   aresulto = abs(varo**(1/2))
   bresulto = (varo**3) * 5
   resulto = aresulto + bresulto
 
   print(f'f({varo}) =', end=" ")
-  if 400 >= varo:
+  if 400 >= resulto:
     print('%.2f' % resulto)
   else:
     print('MAGNA NIMIS!')
