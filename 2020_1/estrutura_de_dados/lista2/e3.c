@@ -34,6 +34,7 @@ int main () {
     concatena_listas(l1, l2);
     printf("Listas concatenadas:\n");
     mostrar(l1);
+    menu(l1);
     return 0;
 }
 
@@ -182,6 +183,20 @@ void menu (lista * l){
 /* Exercício começa aqui */
 
 void concatena_listas(lista * l1, lista * l2){
-    l1->fim->prox = l2->inicio;
-    l1->fim = l2->fim;
+    if (!l2->qtd)
+        return
+
+    if (!l1->qtd) {
+        l1->qtd = l2->qtd;
+        l1->inicio = l2->incio;
+        l1->fim = l2->fim;
+    } else {
+        l2->inicio->ant = l1->fim;
+        l1->fim->prox = l2->inicio;
+        l1->fim = l2->fim;
+        l1->qtd += l2->qtd;
+    }
+    l2->qtd = 0;
+    l2->inicio = NULL;
+    l2->fim = NULL;
 }

@@ -28,29 +28,32 @@ int pop(pilha * p);
 int empty(pilha * p);
 
 int main () {
-    struct pilha * p = (pilha*)malloc(sizeof(struct pilha));
-    p->topo = NULL;
-    p->qtd = 0;
-
     char a[1000];
     int i, j, qtd, diamonds;
 
     scanf("%d", &qtd);
 
+    struct pilha * p = (pilha*)malloc(sizeof(struct pilha));
+    p->topo = NULL;
+    p->qtd = 0;
+
     for (i = 0; i < qtd; i++){
+
         scanf("%s", a);
         diamonds = 0;
         for (j = 0; j < strlen(a); j++){
 
             if (a[j] == '<') push(p, 1);
-            else if (a[j] == '>' && !empty(p)){
-                pop(p);
+            else if (a[j] == '>' && pop(p)){
+               
                 diamonds++;
             }
 
         }
         printf("%d\n", diamonds);
 
+        p->topo = NULL;
+        p->qtd = 0;
     }
 
     return 0;

@@ -24,11 +24,11 @@ registro * procurar(lista * l, int x);
 int remover_registro(lista * l, int x);
 void menu (lista * l);
 void mostrar_reverso(lista * l, registro * ultimo);
-lista * separa_lista(lista * l);
+lista ** separa_lista(lista * l);
 
 int main () {
 
-    lista * l1, * vetor;
+    lista * l1, ** vetor;
     l1 = aloca_lista();
     menu(l1);
 
@@ -38,9 +38,9 @@ int main () {
     mostrar(l1);
     printf("Primeiro vetor:\n");
 
-    mostrar(&vetor[0]);
+    mostrar(vetor[0]);
     printf("Segundo vetor:\n");
-    mostrar(&vetor[1]);
+    mostrar(vetor[1]);
 
     return 0;
 }
@@ -195,16 +195,21 @@ void menu (lista * l){
 
 /* Exercício começa aqui */
 
-lista * separa_lista(lista * l){
-    lista * vetor;
-    vetor = (lista*)malloc(2 * sizeof(lista));
+lista ** separa_lista(lista * l){
+    lista ** vetor;
+    vetor = (lista**)malloc(2 * sizeof(lista*));
+    int i;
+
+    for (i = 0; i < 2; i++)
+        vetor[i] = aloca_lista();
+
     registro * aux;
     aux = l->inicio;
 
     while (aux != NULL){
         if (aux->valor % 2 == 0)
-            incluir(&vetor[0], aux->valor);
-        else incluir(&vetor[1], aux->valor);
+            incluir(vetor[0], aux->valor);
+        else incluir(vetor[1], aux->valor);
 
         aux = aux->prox;
     }
