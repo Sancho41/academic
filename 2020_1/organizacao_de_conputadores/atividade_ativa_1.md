@@ -45,7 +45,8 @@ Um dos componentes do computador, é a memória, e a sua função principal é o
 
 ---
 
-#Questão 4
+# Questão 4
+
 Os processadores ARM funcionam de forma diferente, quando comparados às CPUs tradicionais, chips da Intel e AMD. capazes de realizar tarefas pesadas com facilidade. 
 
 - I) CPUs tradicionais conheciads como x86, exigem menos energia para funcinarem, alem de gerarem uma grande quantidade de calor. É comum, por exemplo verificarmos a presença de coolers em CPUs de desktop
