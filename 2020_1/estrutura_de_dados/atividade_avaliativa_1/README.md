@@ -3,6 +3,7 @@
 ## Questão 1
 
 Implemente uma lista duplamente ligada e adicione uma opção que remova todos os númeor primos dessa lista.
+[Resposta](respostas/q1.c)
 
 ---
 
@@ -22,7 +23,7 @@ Dada uma expreção qualquer com parênteses, indique se a quantidade de parênt
 
 Ou seja, todo parênteses que fecha deve ter um outr parênteses que abre correspondente e não pode haver parênteses que fecha sem um previo parênteses que abre e a quantidade total de parênteses que abre e fecha deve ser igual.
 
-[Resposta](respostas/q1.c)
+[Resposta](respostas/q2.c)
 
 ---
 
