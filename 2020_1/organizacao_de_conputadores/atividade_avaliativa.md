@@ -16,9 +16,11 @@ Sobre as **interrupções** de um processador, julgue as afimartivas a seguir:
   <summary>Resposta</summary>
   <h2>Letra E</h2>
   <p>Explicação:</p>
-  1. Correto<br>
-  2. (Errado) Geralmente os processadores oferecem mecanismos de interrupção para os módulos para que eles possam utilizar.<br>
-  3. Correto <br>
+  <div>
+     1. Correto<br>
+     2. (Errado) Geralmente os processadores oferecem mecanismos de interrupção para os módulos para que eles possam utilizar.<br>
+     3. Correto <br>
+  </div>
 </details>
 
 ---
