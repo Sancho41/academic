@@ -1,0 +1,13 @@
+# monolítico
+
+R1: Faça ler(x) vá_para R2;
+R2: Faça y = 0 vá_para R3;
+R3: Faça contador = 1 vá_para R4;
+R4: Se x < 0 vá_para R5 senão vá_para R6;
+R5: Faça escreva(erro) vá_para Rx;
+R6: Se x > 0 vá_para R7 senão vá_para R11;
+R7: Se x % 2 == 1 vá_para R8 senão vá_para R9;
+R8: Faça y = y + contador vá_para R9;
+R9: Faça x = x div 2 vá_para R10;
+R10: Faça contador = contador * 10 vá_para R6;
+R11: Faça escreva(y) vá_para Rx;

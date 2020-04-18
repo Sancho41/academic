@@ -1,0 +1,30 @@
+programa
+  ler (n);
+
+  se (n < 2) então
+    escrever(-9)
+  senão
+    contador = 1;
+    soma = 0;
+
+    enquanto (contador < n) faça
+      se (n % contador == 0) então
+        soma = soma + contador;
+      fim se;
+      contador = contador + 1;
+    fim enquanto;
+
+    se (soma > n)
+      escrever(1);
+    fim se;
+
+    se (soma < n)
+      escrever(-1);
+    fim se;
+
+    se (soma == n)
+      escrever(0);
+    fim se;
+
+  fim se;
+fim programa;

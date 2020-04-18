@@ -1,0 +1,22 @@
+função comb(n, k)
+  se k == 1 então 
+    retornar n;
+  fim se;
+
+  se k == n então
+    retornar 1;
+  fim se;
+
+  se k > 1 então
+    se k < n então
+      retorar comb(n - 1, k - 1) + comb(n - 1, k);
+    fim se;
+  fim se;
+fim função;
+
+função principal
+  leia(n);
+  leia(k);
+  combinacao = comb(n, k);
+  escreva(combinacao);
+fim função;
