@@ -4,21 +4,21 @@ Ordenar: 0.000001s
 
 Vetor de tamanho 100:
 Criar:   0.000002s
-Ordenar: 0.000033s
+Ordenar: 0.000003s
 
 Vetor de tamanho 1000:
-Criar:   0.000020s
-Ordenar: 0.003936s
+Criar:   0.000021s
+Ordenar: 0.000021s
 
 Vetor de tamanho 10000:
-Criar:   0.000258s
-Ordenar: 0.389384s
+Criar:   0.000215s
+Ordenar: 0.000227s
 
 Vetor de tamanho 100000:
-Criar:   0.002928s
-Ordenar: 43.261875s
+Criar:   0.002250s
+Ordenar: 0.002106s
 
 Vetor de tamanho 1000000:
-Criar:   0.092438s
-Ordenar: 3949.991813s
+Criar:   0.028673s
+Ordenar: 0.027401s
 
