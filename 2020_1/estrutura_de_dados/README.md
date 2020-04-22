@@ -39,6 +39,7 @@
   - Lista de exercício 1 [aqui](lista2)
   - Ordenação:
     - [Bubblesort](aula_remota4_ordenacao/exercicio/bubblesort_times.c)
+    - [Mergesort](aula_remota5_ordenacao/exercicio/mergesort_times.c)
 ---
 
 # Avaliações
