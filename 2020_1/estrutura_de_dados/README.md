@@ -31,6 +31,7 @@
 
 ## **Ordenação:**
   - Bubblesort ([Código](aula_remota4_ordenacao/bubblesort.c))
+  - Mergesort ([Código](aula_remota5_ordenacao/mergesort.c))
 
 ---
 
@@ -38,6 +39,7 @@
   - Lista de exercício 1 [aqui](lista2)
   - Ordenação:
     - [Bubblesort](aula_remota4_ordenacao/exercicio/bubblesort_times.c)
+    - [Mergesort](aula_remota5_ordenacao/exercicio/mergesort_times.c)
 ---
 
 # Avaliações
