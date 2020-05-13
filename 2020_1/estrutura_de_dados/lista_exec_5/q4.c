@@ -1,4 +1,5 @@
-// A função que verifica a sequência começa na linha 43
+// Ajustado função que retornava verdadeiro caso a pilha não estivesse vazia
+// A função que verifica a sequência começa na linha 44
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -68,8 +69,16 @@ int verifica_sequencia(char *sequencia)
     }
   }
 
-  // Retorna 1 caso a string é percorrida sem nenhum erro
-  return 1;
+  // Retorna 1 se a pilha estiver vazia
+  // 0 se ainda estiver alguma coisa
+  if (p->topo == NULL)
+  {
+    return 1;
+  }
+  else
+  {
+    return 0;
+  }
 }
 
 // Cria um novo registro
