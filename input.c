@@ -77,7 +77,7 @@ String input()
 {
   char *string;
   String new;
-  scanf("%m[^\n]s", &string);
+  scanf("%m[^\n]%*c", &string);
   new = str(string);
   return new;
 }
