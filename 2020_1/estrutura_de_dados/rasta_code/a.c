@@ -23,49 +23,39 @@ int main()
 {
   int i, j;
   pilha *p;
-  char input, value;
+  char input, value, pq;
   p = aloca_pilha();
 
   scanf("%d\n", &j);
 
-  for (i = 0; i < j; i++)
+  scanf("%c\n", &input);
+  push(p, input);
+
+  for (i = 1; i < j; i++)
   {
     scanf("%c\n", &input);
-    if (input == '{' || input == '}')
+    pq = pop(p);
+    if (pq == '{' || pq == '}')
     {
-      if (empty(p))
-      {
-        push(p, input);
-      }
-      else
+      if (input != '(' && input != ')')
       {
         printf("lascou\n");
         return 0;
       }
     }
-    else
+    else if (pq == '(' || pq == ')')
     {
-      if (!empty(p))
-        value = pop(p);
-      else
+      if (input != '{' & input != '}')
       {
-        if (i != 0)
-        {
-          printf("lascou\n");
-          return 0;
-        }
+        printf("lascou\n");
+        return 0;
       }
     }
+
+    push(p, input);
   }
 
-  if (empty(p) == 0)
-  {
-    printf("lascou\n");
-  }
-  else
-  {
-    printf("rasta\n");
-  }
+  printf("rasta\n");
 
   return 0;
 }
