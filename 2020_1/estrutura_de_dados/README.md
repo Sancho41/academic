@@ -32,6 +32,8 @@
 ## **Ordenação:**
   - Bubblesort ([Código](aula_remota4_ordenacao/bubblesort.c))
   - Mergesort ([Código](aula_remota5_ordenacao/mergesort.c))
+  - insertionsort ([Código](aula_remota6/insertionsort.c))
+  - selctionsort ([Código](aula_remota6/selectionsort.c))
 
 ---
 
