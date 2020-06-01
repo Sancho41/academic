@@ -34,6 +34,7 @@
   - Mergesort ([Código](aula_remota5_ordenacao/mergesort.c))
   - insertionsort ([Código](aula_remota6/insertionsort.c))
   - selctionsort ([Código](aula_remota6/selectionsort.c))
+  - quicksort ([Código](aula_remota6/quicksort.c))
 
 ---
 
@@ -42,6 +43,7 @@
   - Ordenação:
     - [Bubblesort](aula_remota4_ordenacao/exercicio/bubblesort_times.c)
     - [Mergesort](aula_remota5_ordenacao/exercicio/mergesort_times.c)
+  - Lista de exercício 6 [aqui](lista_exec_6)
 ---
 
 # Avaliações
