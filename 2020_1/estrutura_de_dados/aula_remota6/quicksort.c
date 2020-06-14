@@ -25,3 +25,13 @@ void quick_sort(int long *vetor, int long esquerda, int long direita)
       j--;
     }
   }
+
+  if (j > esquerda)
+  {
+    quick_sort(vetor, esquerda, j);
+  }
+  if (i < direita)
+  {
+    quick_sort(vetor, i, direita);
+  }
+}
