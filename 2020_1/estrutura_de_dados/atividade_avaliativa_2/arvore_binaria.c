@@ -72,8 +72,7 @@ int main()
       {
         printf("Número %d não encontrado na arvore!\n", numero);
       }
-      
-    
+
     printf("\n");
   } while (numero != -1);
 
@@ -146,8 +145,7 @@ void insere(ARVORE *arvore, int numero, int elemento)
 
 /**
  * Função que procura um elemento em uma árvore.
- * Obs: A procura é feita de forma recursiva, 
- * percorrendo a árvore em PRÉ-ORDEM.
+ * Obs: A procura é feita de forma recursiva.
 */
 int procura(ARVORE *arvore, int numero, int elemento)
 {
@@ -163,23 +161,19 @@ int procura(ARVORE *arvore, int numero, int elemento)
     {
 
       // Verifica se o elemento corresponde ao número.
-      if (vetor[elemento] == numero)
+      if (numero == vetor[elemento])
       {
         return 1;
       }
-      // Depois procura pelo lado direito.
-      else if (procura(arvore, numero, esquerda))
+      // Se o numero for menor que o elemento, procura pela esquerda
+      else if (numero < vetor[elemento])
       {
-        return 1;
+        return procura(arvore, numero, esquerda);
       }
-      // E depois pelo lado esquerdo.
-      else if (procura(arvore, numero, direita))
-      {
-        return 1;
-      }
+      // Se o numero for maior que o elemento, procura pela direita
       else
       {
-        return 0;
+        return procura(arvore, numero, direita);
       }
     }
     else
