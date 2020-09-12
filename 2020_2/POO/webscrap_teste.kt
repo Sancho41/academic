@@ -7,7 +7,7 @@ import java.nio.charset.Charset
 fun main() {
     val login = Jsoup.connect("http://online.iesb.br/aonline/middle_logon.asp")
         .data("txtnumero_matricula", "1712130049")
-        .data("txtsenha_tac", "Tanchu_41")
+        .data("txtsenha_tac", "MinhaSenha")
         .method(Connection.Method.POST)
         .execute()
 
