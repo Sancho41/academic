@@ -1,0 +1,23 @@
+{
+  "tasks": [
+    {
+      "type": "shell",
+      "label": "g++ build",
+      "command": "/usr/bin/g++",
+      "args": ["-g", "${file}", "-o", "${fileDirname}/a.out"],
+      "options": {
+        "cwd": "/usr/bin"
+      }
+    },
+    {
+      "type": "shell",
+      "label": "gpp build",
+      "command": "/usr/bin/gpp",
+      "args": ["-g", "${file}", "-o", "${fileDirname}/a.out"],
+      "options": {
+        "cwd": "/usr/bin"
+      }
+    }
+  ],
+  "version": "2.0.0"
+}
