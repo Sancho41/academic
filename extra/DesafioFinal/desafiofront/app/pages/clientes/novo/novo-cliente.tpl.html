@@ -1,0 +1,60 @@
+<div ng-controller="NovoClienteController as vm" ng-init="vm.iniciar()" style="padding: 20px;">
+    <form>
+        <h1>Informações pessoais</h1>
+        <div class="form-group">
+            <label for="cpf">CPF</label>
+            <input type="text" class="form-control" id="cpf" ng-model="vm.novoCliente.cpf" placeholder="Digite o seu CPF">
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" ng-model="vm.novoCliente.email" placeholder="Digite o seu Email">
+        </div>
+
+        <div class="form-group">
+            <label for="nome">Nome</label>
+            <input type="text" class="form-control" id="nome" ng-model="vm.novoCliente.nome" placeholder="Digite o seu nome">
+        </div>
+
+        <div class="form-group">
+            <label for="contato">Contato</label>
+            <input type="text" class="form-control" id="contato" ng-model="vm.novoCliente.contato" placeholder="Digite o seu contato">
+        </div>
+
+        <hr>
+
+        <h1>Endereço</h1>
+
+        <div class="form-group">
+            <label for="cep">Cep</label>
+            <input type="text" class="form-control" id="cep" ng-model="vm.novoCliente.cep" placeholder="Digite o seu cep">
+        </div>
+
+        <div class="form-group">
+            <label for="logradouro">Logradouro</label>
+            <input type="text" class="form-control" id="logradouro" ng-model="vm.novoCliente.logradouro" placeholder="Digite o seu logradouro">
+        </div>
+
+        <div class="form-group">
+            <label for="complemento">Complemento</label>
+            <input type="text" class="form-control" id="complemento" ng-model="vm.novoCliente.complemento" placeholder="Digite o seu complemento">
+        </div>
+
+        <div class="form-group">
+            <label for="bairro">Bairro</label>
+            <input type="text" class="form-control" id="bairro" ng-model="vm.novoCliente.bairro" placeholder="Digite o seu bairro">
+        </div>
+
+        <div class="form-group">
+            <label for="cidade">Cidade</label>
+            <input type="text" class="form-control" id="cidade" ng-model="vm.novoCliente.cidade" placeholder="Digite a sua cidade">
+        </div>
+
+        <div class="form-group">
+            <label for="uf">Unidade Federativa</label>
+            <input type="text" class="form-control" id="uf" ng-model="vm.novoCliente.uf" placeholder="Digite a sua Unidade Federativa">
+        </div>
+
+        <button class="btn btn-primary" ng-click="vm.salvar(vm.novoCliente)">Salvar</button>
+    </form>
+</div>

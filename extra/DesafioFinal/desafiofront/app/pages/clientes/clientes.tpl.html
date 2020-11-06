@@ -1,0 +1,22 @@
+<div ng-controller="ClientesController as vm" ng-init="vm.iniciar()">
+
+    <button class="btn btn-primary mb-3" ng-click="vm.go('/clientes/novo')">Cadastra novo cliente</button>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">CPF</th>
+                <th scope="col">Nome</th>
+                <th scope="col">Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="cliente in vm.listaClientes track by $index">
+                <th scope="row">{{ cliente.cpf }}</th>
+                <td>{{ cliente.nome }}</td>
+                <td>{{ cliente.email }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
