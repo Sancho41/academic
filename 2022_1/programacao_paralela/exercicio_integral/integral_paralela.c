@@ -9,7 +9,7 @@ int main()
 {
   int time = omp_get_wtime();
 
-  int threads = 1;
+  int threads = 20;
 
   int i;
   double pi, sum = 0.0;

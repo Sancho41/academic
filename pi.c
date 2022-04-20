@@ -1,7 +1,7 @@
 #include <omp.h>
 #include <stdio.h>
-static long num_steps = 100000; double step;
-int threads = 2;
+static long num_steps = 1000000000; double step;
+int threads = 10;
 
 
 void main () { 
