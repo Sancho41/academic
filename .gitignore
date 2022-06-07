@@ -2,5 +2,6 @@
 **a.exe
 **test
 in
+out
 pythonenv*/
 .venv
